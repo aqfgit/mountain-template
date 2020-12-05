@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="bundle/app.css">
     <title>MINE</title>
 </head>
-<body>
 
+<body>
+    <header class="page-header">
+        <div class="l-container">
+            <nav class="page-nav page-header__page-nav" id="menu" aria-labelledby="nav-label">
+                <h2 id="nav-label" class="page-nav__label">Menu</h2>
+                <a class="logo page-nav__logo">
+                    <img src="assets/images/mashup-icon.svg" alt="" class="logo__img">
+                    <span class="logo__company">Mashup Template</span>
+                </a>
+                <button type="button" class="page-nav__toggler" aria-expanded="false" title="Otwórz/zamknij menu">
+                    <span class="page-nav__toggler-icon" aria-hidden="true"></span>
+                    <span class="page-nav__toggler-label">Otwórz/zamknij menu</span>
+                </button>
+                <ul class="page-nav__menu menu">
+                    <li class="menu__item"><a href="/" class="menu__link">Home</a></li>
+                    <li class="menu__item"><a href="/oferta.html" class="menu__link">Project</a></li>
+                    <li class="menu__item button"><a href="/plyty.html" class="menu__link">Components</a></li>
+                </ul>
+            </nav>
+
+            <div class="page-header__title-wrap">
+                <h1 class="page-header__title">Mountain</h1>
+                <p class="page-header__copy">Welcome to Mountain website. Agency in Berlin.</p>
+                <a class="button">Discover</a>
+            </div>
+        </div>
+
+
+    </header>
+    <script src="js/app.js"></script>
 </body>
+
 </html>

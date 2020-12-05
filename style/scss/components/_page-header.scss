@@ -1,0 +1,48 @@
+.page-header {
+  background: $header-color;
+  
+  &__title {
+    font-family: 'Fjalla One', sans-serif;
+  }
+
+  &__title,
+  &__copy {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 3.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+   
+    font-size: 54px;
+    margin-bottom: 5px;
+
+  }
+
+  &__copy {
+    font-size: 1.6rem;
+    padding: 0 10px;
+  }
+
+  &__page-nav {
+    padding: 10px 0 0 0;
+  }
+
+  &__nav-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+    transition: background-color 300ms linear;
+
+    &--floating {
+      background: #000000e7;
+    }
+  }
+
+
+}

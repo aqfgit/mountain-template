@@ -1,0 +1,186 @@
+.menu {
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0; }
+  .menu__link {
+    font-size: 1.6rem;
+    display: block;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #ffffff; }
+  .menu__item {
+    margin: 20px 0 0 0; }
+
+@media screen and (min-width: 776px) {
+  .menu {
+    box-shadow: none;
+    width: auto;
+    margin: 0;
+    color: #ffffff;
+    display: flex;
+    gap: 20px; }
+    .menu__item {
+      display: inline-block;
+      margin: 0;
+      border: none; }
+    .menu__link {
+      color: #ffffff;
+      display: block;
+      font-size: 1.8rem; }
+      .menu__link:hover {
+        color: #e2e2e2; } }
+
+.page-header {
+  background: #5050d6; }
+  .page-header__title {
+    font-family: 'Fjalla One', sans-serif; }
+  .page-header__title, .page-header__copy {
+    color: #ffffff;
+    text-align: center; }
+  .page-header__title {
+    font-size: 3.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 54px;
+    margin-bottom: 5px; }
+  .page-header__copy {
+    font-size: 1.6rem;
+    padding: 0 10px; }
+  .page-header__page-nav {
+    padding: 10px 0 0 0; }
+  .page-header__nav-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+    transition: background-color 300ms linear; }
+    .page-header__nav-wrap--floating {
+      background: #000000e7; }
+
+@keyframes showNav {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+  .page-nav__toggler {
+    border: none;
+    background: none;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    padding: 25px 0; }
+  .page-nav__toggler-icon, .page-nav__toggler-icon::before, .page-nav__toggler-icon::after {
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: #ffffff;
+    position: absolute;
+    display: block;
+    content: "";
+    transition: 0.5s; }
+  .page-nav__toggler-icon::before {
+    top: -12px; }
+  .page-nav__toggler-icon::after {
+    top: 12px; }
+  .page-nav__toggler-icon--active {
+    background: rgba(0, 0, 0, 0); }
+    .page-nav__toggler-icon--active::before {
+      top: 0;
+      transform: rotate(45deg); }
+    .page-nav__toggler-icon--active::after {
+      top: 0;
+      transform: rotate(135deg); }
+  .page-nav__toggler-label, .page-nav__label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; }
+  .page-nav__logo {
+    padding: 20px 0; }
+
+.page-nav__menu {
+  display: none; }
+  .page-nav__menu--open {
+    display: block;
+    position: relative;
+    animation: showNav 250ms ease-in-out both;
+    background: #5050d6; }
+    .page-nav__menu--open::before {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: -100px;
+      width: 200vw;
+      height: 1px;
+      background: #ffffff3d;
+      overflow: hidden; }
+
+@media screen and (min-width: 776px) {
+  .page-nav {
+    justify-content: space-between;
+    padding: 8px 20px;
+    background: none;
+    box-shadow: none; }
+    .page-nav__toggler {
+      display: none; }
+    .page-nav__menu {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      box-shadow: none; }
+      .page-nav__menu--open::before {
+        display: none; } }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; }
+  .logo__company {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: #ffffff; }
+
+.button {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  padding: 15px; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hind Siliguri', sans-serif; }
+
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+.l-container {
+  margin: 0 auto;
+  padding: 0 15px; }
+  @media (min-width: 768px) {
+    .l-container {
+      width: 750px; } }
+  @media (min-width: 992px) {
+    .l-container {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .l-container {
+      width: 1170px; } }

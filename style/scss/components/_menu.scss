@@ -1,0 +1,47 @@
+.menu {
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+
+  &__link {
+    font-size: 1.6rem;
+    display: block;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #ffffff;
+  }
+
+  &__item {
+    margin: 20px 0 0 0;
+
+  }
+  
+}
+
+@media screen and (min-width: $mobile-menu-breakpoint) {
+  .menu {
+    box-shadow: none;
+    width: auto;
+    margin: 0;
+    color: #ffffff;
+    display: flex;
+    gap: 20px;
+
+    &__item {
+      display: inline-block;
+      margin: 0;
+      border: none;
+    }
+    &__link {
+      color: #ffffff;
+      display: block;
+      font-size: 1.8rem;
+
+      &:hover {
+        color: #e2e2e2;
+      }
+
+    }
+  }
+}
