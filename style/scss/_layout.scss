@@ -1,6 +1,21 @@
 .l-container {
     margin: 0 auto;
     padding: 0 $mobile-container-padding;
+
+    @media (min-width: 768px) {
+        width: 750px;
+    }
+
+    @media (min-width: 992px) {
+        width: 970px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 1170px;
+    }
+}
+
+.l-row {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -10,21 +25,10 @@
     &--between {
         justify-content: space-between;
     }
-    
-
-    @media (min-width: 768px) {
-        width: 750px;
-    }
 
     @media (min-width: 992px) {
-        width: 970px;
-
         &--projects {
             justify-content: space-between;
         }
-    }
-
-    @media (min-width: 1200px) {
-        width: 1170px;
     }
 }

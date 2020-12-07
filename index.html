@@ -13,7 +13,7 @@
 
 <body>
     <header class="page-header">
-        <div class="l-container l-container--between">
+        <div class="l-container l-row--between">
             <nav class="page-nav page-header__page-nav" id="menu" aria-labelledby="nav-label">
                 <h2 id="nav-label" class="page-nav__label">Menu</h2>
                 <a class="logo page-nav__logo">
@@ -42,8 +42,8 @@
 
     </header>
     <main>
-        <div class="l-container">
-            <section class="section section--about">
+        <div class="l-container l-row">
+            <section class="section section--text l-row">
                 <h2 class="section__heading">About Us</h2>
                 <p class="section__paragraph">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus
@@ -53,32 +53,85 @@
                     blandit. Cras ultrices hendrerit nisl.</p>
             </section>
         </div>
-        
-            <article class="section">
-                <div class="project-card l-container l-container--projects">
-                    <div class="project-card__img-wrap">
-                        <img src="assets/images/img-07.jpg" alt="" class="project-card__img">
-                    </div>
-                    <div class="project-card__card-wrap">
-                        <div class="project-card__title-wrap">
-                            <h2 class="project-card__title">Moon</h2>
-                            <div class="project-card__nav-wrap">
-                                <button class="project-card__nav-button project-card__nav-button--prev">&lt;</button>
-                                <button class="project-card__nav-button project-card__nav-button--next">&gt;</button>
-                            </div>
-                        </div>
-                        <p class="project-card__paragraph">
-                            Sed id tellus in risus pre tium imperdiet eu lobortis dolor. Sed pellentesque, urna ac viverra
-                            lacinia, erat mauris venenatis purus, mollis egestas urna purus ac ex. Aenean nunc sem, lobortis
-                            at elit non, lobortis laoreet nibh. Maecenas at mi ipsum.
 
-                            Quisque tempor, ligula pharetra luctus elementum, arcu nisl suscipit ante, pharetra commodo dui
-                            est et enim. Sed eu vestibulum elit. Donec ut libero non.
-                        </p>
-                        <button class="project-card__button button button--section">Discover</button>
-                    </div>
+        <section class="section">
+            <div class="project-card l-row l-row--projects l-container">
+                <div class="project-card__img-wrap">
+                    <img src="assets/images/img-06.jpg" alt="" class="project-card__img">
                 </div>
-            </article>
+                <div class="project-card__card-wrap">
+                    <div class="project-card__title-wrap">
+                        <h2 class="project-card__title">Moon</h2>
+                        <div class="project-card__nav-wrap">
+                            <button class="project-card__nav-button project-card__nav-button--prev">&lt;</button>
+                            <button class="project-card__nav-button project-card__nav-button--next">&gt;</button>
+                        </div>
+                    </div>
+                    <p class="project-card__paragraph">
+                        Sed id tellus in risus pre tium imperdiet eu lobortis dolor. Sed pellentesque, urna ac viverra
+                        lacinia, erat mauris venenatis purus, mollis egestas urna purus ac ex. Aenean nunc sem, lobortis
+                        at elit non, lobortis laoreet nibh. Maecenas at mi ipsum.
+
+                        Quisque tempor, ligula pharetra luctus elementum, arcu nisl suscipit ante, pharetra commodo dui
+                        est et enim. Sed eu vestibulum elit. Donec ut libero non.
+                    </p>
+                    <button class="project-card__button button button--section">Discover</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="l-container l-row">
+            <section class="section section--text l-row">
+                <h2 class="section__heading">Partners</h2>
+                <p class="section__paragraph">
+                    Praesent at feugiat est, at faucibus ipsum. Aenean condimentum mauris vel malesuada pulvinar.
+                    Vestibulum sit amet hendrerit leo, quis vehicula mi.</p>
+                <ul class="partners l-row l-row--between">
+                    <li class="partners__item">
+                        <div class="partners__img-wrap">
+                            <img src="assets/images/profil-01.jpg" alt="" class="partners__img">
+                        </div>
+                        <h3 class="partners__name">John Snow</h3>
+                        <p class="partners__role">UX designer</p>
+                        <p class="partners__desc">Sed elementum vehicula nisl, a egestas velit rhoncus nec.Cras vel
+                            sapien tincidunt, lacinia risus vel, imperdiet neque.</p>
+                        <ul class="partners__socials socials">
+                            <li class="socials__item">O</li>
+                            <li class="socials__item">O</li>
+                            <li class="socials__item">O</li>
+                        </ul>
+                    </li>
+                    <li class="partners__item">
+                        <div class="partners__img-wrap">
+                            <img src="assets/images/profil-02.jpg" alt="" class="partners__img">
+                        </div>
+                        <h3 class="partners__name">Sara Burner</h3>
+                        <p class="partners__role">UX designer</p>
+                        <p class="partners__desc">Sed elementum vehicula nisl, a egestas velit rhoncus nec.Cras vel
+                            sapien tincidunt, lacinia risus vel, imperdiet neque.</p>
+                        <ul class="partners__socials socials">
+                            <li class="socials__item">O</li>
+                            <li class="socials__item">O</li>
+                            <li class="socials__item">O</li>
+                        </ul>
+                    </li>
+                    <li class="partners__item">
+                        <div class="partners__img-wrap">
+                            <img src="assets/images/profil-03.jpg" alt="" class="partners__img">
+                        </div>
+                        <h3 class="partners__name">George Mountain</h3>
+                        <p class="partners__role">UX designer</p>
+                        <p class="partners__desc">Sed elementum vehicula nisl, a egestas velit rhoncus nec.Cras vel
+                            sapien tincidunt, lacinia risus vel, imperdiet neque.</p>
+                        <ul class="partners__socials socials">
+                            <li class="socials__item">O</li>
+                            <li class="socials__item">O</li>
+                            <li class="socials__item">O</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </main>
     <script src="js/app.js"></script>
 </body>

@@ -1,6 +1,15 @@
 .section {
     padding: 60px 0;
 
+    &__heading,
+    &__paragraph {
+        --width: 8;
+        --gap-constant: 0.3%;
+        --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+        --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
+        flex-basis: calc(var(--initialbasis) - var(--gap));
+    }
+
     &__heading {
         font-family: 'Lobster', cursive;
         font-size: $h1;
@@ -25,7 +34,7 @@
         line-height: 1.6;
     }
 
-    &--about {
+    &--text {
         // $width: 12;
         // $gap-constant: 0.3%;
         // $initialbasis: calc((#{$width} / #{$columns}) * 100%);
@@ -36,11 +45,14 @@
         --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
         --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
         flex-basis: calc(var(--initialbasis) - var(--gap));
-
-        @media screen and (min-width: 992px) {
-            --width: 8;
-        }
     
     }
     
+    @media screen and (min-width: 992px) {
+        &__heading,
+        &__paragraph {
+            
+        }
+    }
+
 }

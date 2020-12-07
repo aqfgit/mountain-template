@@ -1,0 +1,47 @@
+.partners {
+    padding: 0;
+    margin: 20px 0 0 0;
+    --columns: 12;
+    gap: 40px;
+
+  &__item {
+    --width: 12;
+    --gap-constant: 0.3%;
+    --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+    --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
+    flex-basis: calc(var(--initialbasis) - var(--gap));
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__name {
+      font-weight: 700;
+      font-size: $h3;
+      margin: 10px 0 0 0;
+  }
+
+  &__role,
+  &__desc {
+      color: #838383;
+      font-size: 1.8rem;
+      line-height: 1.4;
+      text-align: center;
+      margin: 5px 0;
+  }
+
+  &__socials {
+      margin-top: 10px;
+  }
+
+  @media screen and (min-width: 992px) {
+    gap: 0;
+    
+    &__item {
+      --width: 4;
+      margin-right: var(--gap);
+    }
+  }
+}
