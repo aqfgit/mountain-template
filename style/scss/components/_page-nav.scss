@@ -13,6 +13,12 @@
   align-items: center;
   flex-wrap: wrap;
 
+  $width: 12;
+  $gap-constant: 0.3%;
+  $initialbasis: calc((#{$width} / #{$columns}) * 100%);
+  $gap: calc((#{$columns} - #{$width}) * #{$gap-constant});
+  flex-basis: calc(#{$initialbasis} - #{$gap});
+
   &__toggler {
     border: none;
     background: none;
@@ -101,7 +107,6 @@
 @media screen and (min-width: $mobile-menu-breakpoint) {
   .page-nav {
     justify-content: space-between;
-    padding: 8px 20px;
     background: none;
     box-shadow: none;
 

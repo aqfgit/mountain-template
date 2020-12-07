@@ -1,0 +1,46 @@
+.section {
+    padding: 60px 0;
+
+    &__heading {
+        font-family: 'Lobster', cursive;
+        font-size: $h1;
+        font-weight: 700;
+        color: $primary;
+        text-align: center;
+        margin: 0;
+
+        &::after {
+            content: "...";
+            color: $primary;
+            display: block;
+            letter-spacing: .5rem;
+            margin-top: -25px;
+        }
+    }
+
+    &__paragraph {
+        font-size: 1.8rem;
+        color: #838383;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    &--about {
+        // $width: 12;
+        // $gap-constant: 0.3%;
+        // $initialbasis: calc((#{$width} / #{$columns}) * 100%);
+        // $gap: calc((#{$columns} - #{$width}) * #{$gap-constant});
+        // flex-basis: calc(#{$initialbasis} - #{$gap});
+        --width: 12;
+        --gap-constant: 0.3%;
+        --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+        --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
+        flex-basis: calc(var(--initialbasis) - var(--gap));
+
+        @media screen and (min-width: $mobile-menu-breakpoint) {
+            --width: 8;
+        }
+    
+    }
+    
+}

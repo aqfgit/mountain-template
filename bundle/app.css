@@ -39,14 +39,21 @@
     color: #ffffff;
     text-align: center; }
   .page-header__title {
-    font-size: 3.6rem;
+    font-family: 'Lobster', cursive;
+    font-size: 8rem;
     font-weight: 700;
-    letter-spacing: 2px;
-    font-size: 54px;
-    margin-bottom: 5px; }
+    margin: 0; }
+  .page-header__title-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 15% 0; }
   .page-header__copy {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    text-transform: uppercase;
     padding: 0 10px; }
+  .page-header__cta {
+    font-size: 2.4rem;
+    color: #ffffff; }
   .page-header__page-nav {
     padding: 10px 0 0 0; }
   .page-header__nav-wrap {
@@ -69,7 +76,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  flex-basis: calc(calc((12 / 12) * 100%) - calc((12 - 12) * 0.3%)); }
   .page-nav__toggler {
     border: none;
     background: none;
@@ -132,7 +140,6 @@
 @media screen and (min-width: 776px) {
   .page-nav {
     justify-content: space-between;
-    padding: 8px 20px;
     background: none;
     box-shadow: none; }
     .page-nav__toggler {
@@ -160,6 +167,41 @@
   border: 1px solid #ffffff;
   border-radius: 2px;
   padding: 15px; }
+  .button--center {
+    margin: 0 auto; }
+  .button--large {
+    padding: 1.4rem 2.2rem;
+    border-radius: 4px; }
+
+.section {
+  padding: 60px 0; }
+  .section__heading {
+    font-family: 'Lobster', cursive;
+    font-size: calc(calc(calc(calc(calc(1em * 1.333) * 1.333) * 1.333) * 1.333) * 1.333);
+    font-weight: 700;
+    color: #1763e9;
+    text-align: center;
+    margin: 0; }
+    .section__heading::after {
+      content: "...";
+      color: #1763e9;
+      display: block;
+      letter-spacing: .5rem;
+      margin-top: -25px; }
+  .section__paragraph {
+    font-size: 1.8rem;
+    color: #838383;
+    text-align: center;
+    line-height: 1.6; }
+  .section--about {
+    --width: 12;
+    --gap-constant: 0.3%;
+    --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+    --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
+    flex-basis: calc(var(--initialbasis) - var(--gap)); }
+    @media screen and (min-width: 776px) {
+      .section--about {
+        --width: 8; } }
 
 html {
   font-size: 62.5%; }
@@ -174,7 +216,12 @@ body {
 
 .l-container {
   margin: 0 auto;
-  padding: 0 15px; }
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row; }
+  .l-container--between {
+    justify-content: space-between; }
   @media (min-width: 768px) {
     .l-container {
       width: 750px; } }

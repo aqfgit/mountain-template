@@ -4,4 +4,13 @@
     border: 1px solid #ffffff;
     border-radius: 2px;
     padding: 15px;
+
+    &--center {
+        margin: 0 auto;
+    }
+
+    &--large {
+        padding: 1.4rem 2.2rem;
+        border-radius: 4px;
+    }
 }

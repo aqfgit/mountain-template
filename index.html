@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="bundle/app.css">
     <title>MINE</title>
 </head>
 
 <body>
     <header class="page-header">
-        <div class="l-container">
+        <div class="l-container l-container--between">
             <nav class="page-nav page-header__page-nav" id="menu" aria-labelledby="nav-label">
                 <h2 id="nav-label" class="page-nav__label">Menu</h2>
                 <a class="logo page-nav__logo">
@@ -30,16 +30,58 @@
                     <li class="menu__item button"><a href="/plyty.html" class="menu__link">Components</a></li>
                 </ul>
             </nav>
-
-            <div class="page-header__title-wrap">
-                <h1 class="page-header__title">Mountain</h1>
-                <p class="page-header__copy">Welcome to Mountain website. Agency in Berlin.</p>
-                <a class="button">Discover</a>
-            </div>
         </div>
-
-
+        <div class="l-container">
+                <div class="page-header__title-wrap">
+                        <h1 class="page-header__title">Mountain</h1>
+                        <p class="page-header__copy">Welcome to Mountain website. Agency in Berlin.</p>
+                        <a class="page-header__cta button button--center button--large">Discover</a>
+                    </div>
+        </div>
+            
+        
     </header>
+    <main>
+        <div class="l-container">
+            <section class="section section--about">
+                <h2 class="section__heading">About Us</h2>
+                <p class="section__paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus
+                    at sem quis varius.
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Phasellus iaculis magna sagittis elit sagittis, at hendrerit lorem venenatis. Morbi accumsan iaculis
+                    blandit. Cras ultrices hendrerit nisl.</p>
+            </section>
+        </div>
+        <div class="l-container">
+            <article class="project-card section">
+                <img src="assets/images/img-07.jpg" alt="" class="project-card__img">
+                <div class="project-card__card-wrap">
+                    <div class="project-card__nav-wrap">
+                        <h2 class="project-card__title">Moon</h2>
+                        <button class="project-card__nav-button project-card__nav-button--prev">&lt;</button>
+                        <button class="project-card__nav-button project-card__nav-button--next">&gt;</button>
+                    </div>
+                    <p class="project-card__paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam molestiae dolore natus quidem
+                        officia velit soluta, consectetur reiciendis voluptatem rem dolores aliquid atque, nisi sed
+                        itaque! Itaque veniam, quidem illo natus atque magnam perspiciatis quod illum saepe architecto
+                        aspernatur. Laudantium maxime est voluptates? Totam, similique corrupti. Totam ipsam quibusdam
+                        facere at fugiat repellendus, quidem cum aliquid? Modi mollitia magnam minus asperiores
+                        explicabo corrupti facilis a, dolore cum. Sequi, ipsam. Nemo atque, eaque illo cum, ipsum
+                        deserunt voluptatibus voluptatum voluptatem numquam dolores corrupti minus mollitia quas
+                        delectus ipsam itaque dolorem. Praesentium recusandae consequuntur adipisci, deserunt atque
+                        facilis? Necessitatibus, vitae perspiciatis accusantium, quos veritatis beatae id ab nemo
+                        facilis quibusdam aperiam asperiores aliquam quae ducimus iure possimus quam sunt officiis
+                        magni! Dolor placeat, hic a fugit dolorem aspernatur tenetur nam quaerat dignissimos et fuga
+                        tempora accusantium totam rerum corrupti nemo facilis voluptas odio nulla accusamus id non! Est
+                        dicta odit provident facilis.
+                    </p>
+                    <button class="project-card__button button">Discover</button>
+                </div>
+            </article>
+        </div>
+    </main>
     <script src="js/app.js"></script>
 </body>
 

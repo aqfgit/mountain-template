@@ -1,3 +1,15 @@
 $mobile-menu-breakpoint: 776px;
 $mobile-container-padding: 15px;
 $header-color: rgb(80, 80, 214);
+$primary: #1763e9;
+
+$columns: 12;
+
+$base-size: 1em;
+$type-scale: 1.333;
+$title: 8rem;
+$h5: calc(#{$base-size} * #{$type-scale});
+$h4: calc(#{$h5} * #{$type-scale});
+$h3: calc(#{$h4} * #{$type-scale});
+$h2: calc(#{$h3} * #{$type-scale});
+$h1: calc(#{$h2} * #{$type-scale});

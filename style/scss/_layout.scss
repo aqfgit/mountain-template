@@ -1,6 +1,14 @@
 .l-container {
     margin: 0 auto;
     padding: 0 $mobile-container-padding;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    $columns: 12;
+
+    &--between {
+        justify-content: space-between;
+    }
 
     @media (min-width: 768px) {
         width: 750px;
