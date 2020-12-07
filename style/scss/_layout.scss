@@ -4,11 +4,13 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
     $columns: 12;
 
     &--between {
         justify-content: space-between;
     }
+    
 
     @media (min-width: 768px) {
         width: 750px;
@@ -16,6 +18,10 @@
 
     @media (min-width: 992px) {
         width: 970px;
+
+        &--projects {
+            justify-content: space-between;
+        }
     }
 
     @media (min-width: 1200px) {

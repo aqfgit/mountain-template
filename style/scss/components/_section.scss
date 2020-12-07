@@ -37,7 +37,7 @@
         --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
         flex-basis: calc(var(--initialbasis) - var(--gap));
 
-        @media screen and (min-width: $mobile-menu-breakpoint) {
+        @media screen and (min-width: 992px) {
             --width: 8;
         }
     
