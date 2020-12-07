@@ -173,12 +173,13 @@
     padding: 1.4rem 2.2rem;
     border-radius: 4px; }
   .button--section {
-    border-color: #1763e9; }
+    border-color: #1763e9;
+    color: #1763e9; }
 
 .section {
   padding: 60px 0; }
   .section__heading, .section__paragraph {
-    --width: 8;
+    --width: 12;
     --gap-constant: 0.3%;
     --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
     --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
@@ -207,6 +208,9 @@
     --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
     --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
     flex-basis: calc(var(--initialbasis) - var(--gap)); }
+  @media screen and (min-width: 992px) {
+    .section__heading, .section__paragraph {
+      --width: 8; } }
 
 .project-card__img-wrap, .project-card__card-wrap {
   --gap-constant: 0.3%;
@@ -268,6 +272,7 @@
 .partners {
   padding: 0;
   margin: 20px 0 0 0;
+  list-style: none;
   --columns: 12;
   gap: 40px; }
   .partners__item {
@@ -296,8 +301,7 @@
     .partners {
       gap: 0; }
       .partners__item {
-        --width: 4;
-        margin-right: var(--gap); } }
+        --width: 4; } }
 
 .socials {
   display: flex;
@@ -305,6 +309,104 @@
   gap: 5px;
   list-style: none;
   padding: 0; }
+
+.sponsors {
+  padding: 0;
+  margin: 20px 0 0 0;
+  list-style: none;
+  --columns: 12;
+  --width: 12;
+  gap: 40px;
+  --width: 12;
+  --gap-constant: 0.3%;
+  --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+  --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
+  flex-basis: calc(var(--initialbasis) - var(--gap)); }
+  .sponsors__item {
+    --width: 12;
+    --gap-constant: 0.3%;
+    --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+    --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
+    flex-basis: calc(var(--initialbasis) - var(--gap));
+    display: flex;
+    justify-content: center; }
+  .sponsors__img {
+    width: auto;
+    max-width: 100%;
+    max-height: 47px; }
+  @media screen and (min-width: 992px) {
+    .sponsors {
+      gap: 0; }
+      .sponsors__item {
+        --width: 3; } }
+
+.form {
+  --width: 12;
+  --gap-constant: 0.3%;
+  --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+  --gap: calc(
+    (var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%)
+  );
+  flex-basis: calc(var(--initialbasis) - var(--gap));
+  gap: 20px; }
+  .form__wrap {
+    margin-top: 20px;
+    --width: 8;
+    --gap-constant: 0.3%;
+    --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+    --gap: calc(
+      (var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%)
+    );
+    flex-basis: calc(var(--initialbasis) - var(--gap));
+    --columns: 12; }
+  .form__label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; }
+  .form__input {
+    --width: 12;
+    --gap-constant: 0.3%;
+    --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+    --gap: calc(
+      (var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%)
+    );
+    flex-basis: calc(var(--initialbasis) - var(--gap));
+    padding: 15px;
+    color: #555555;
+    border: 1px solid #ddd;
+    font-size: 1.8rem; }
+    .form__input::placeholder {
+      color: #979797; }
+  .form__submit {
+    font-size: 1.8rem;
+    margin-right: auto; }
+  .form__contacts {
+    margin-top: 20px;
+    --width: 12;
+    --gap-constant: 0.3%;
+    --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+    --gap: calc(
+      (var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%)
+    );
+    flex-basis: calc(var(--initialbasis) - var(--gap)); }
+  .form__contacts-item {
+    font-size: 1.8rem;
+    color: #838383; }
+  @media screen and (min-width: 992px) {
+    .form {
+      --width: 6; }
+      .form__contacts {
+        --width: 5;
+        margin: 0; }
+      .form__wrap {
+        box-shadow: 0 0 9px 4px #d7d7d7;
+        padding: 50px; } }
 
 html {
   font-size: 62.5%; }
@@ -334,7 +436,8 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  --columns: 12; }
   .l-row--between {
     justify-content: space-between; }
   @media (min-width: 992px) {

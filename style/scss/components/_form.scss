@@ -1,0 +1,89 @@
+.form {
+  --width: 12;
+  --gap-constant: 0.3%;
+  --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+  --gap: calc(
+    (var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%)
+  );
+  flex-basis: calc(var(--initialbasis) - var(--gap));
+  &__wrap {
+    margin-top: 20px;
+
+    --width: 8;
+    --gap-constant: 0.3%;
+    --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+    --gap: calc(
+      (var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%)
+    );
+    flex-basis: calc(var(--initialbasis) - var(--gap));
+
+    --columns: 12;
+  }
+
+  gap: 20px;
+
+  &__label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+
+  &__input {
+    --width: 12;
+    --gap-constant: 0.3%;
+    --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+    --gap: calc(
+      (var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%)
+    );
+    flex-basis: calc(var(--initialbasis) - var(--gap));
+
+    padding: 15px;
+    color: #555555;
+    border: 1px solid #ddd;
+    font-size: 1.8rem;
+
+    &::placeholder {
+      color: #979797;
+    }
+  }
+
+  &__submit {
+    font-size: 1.8rem;
+    margin-right: auto;
+  }
+
+  &__contacts {
+    margin-top: 20px;
+
+    --width: 12;
+    --gap-constant: 0.3%;
+    --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+    --gap: calc(
+      (var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%)
+    );
+    flex-basis: calc(var(--initialbasis) - var(--gap));
+  }
+
+  &__contacts-item {
+    font-size: 1.8rem;
+    color: #838383;
+  }
+
+  @media screen and (min-width: 992px) {
+    --width: 6;
+    &__contacts {
+      --width: 5;
+      margin: 0;
+    }
+    &__wrap {
+        box-shadow: 0 0 9px 4px #d7d7d7;
+        padding: 50px;
+    }
+  }
+}

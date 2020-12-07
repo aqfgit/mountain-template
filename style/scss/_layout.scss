@@ -20,7 +20,7 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    $columns: 12;
+    --columns: 12;
 
     &--between {
         justify-content: space-between;

@@ -3,7 +3,7 @@
 
     &__heading,
     &__paragraph {
-        --width: 8;
+        --width: 12;
         --gap-constant: 0.3%;
         --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
         --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
@@ -51,7 +51,7 @@
     @media screen and (min-width: 992px) {
         &__heading,
         &__paragraph {
-            
+            --width: 8;
         }
     }
 
