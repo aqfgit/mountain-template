@@ -40,7 +40,7 @@
     text-align: center; }
   .page-header__title {
     font-family: 'Lobster', cursive;
-    font-size: 8rem;
+    font-size: 7.7rem;
     font-weight: 700;
     margin: 0; }
   .page-header__title-wrap {
@@ -55,7 +55,7 @@
     font-size: 2.4rem;
     color: #ffffff; }
   .page-header__page-nav {
-    padding: 10px 0 0 0; }
+    padding: 20px 0; }
   .page-header__nav-wrap {
     position: fixed;
     top: 0;
@@ -155,7 +155,8 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px; }
+  gap: 10px;
+  text-decoration: none; }
   .logo__company {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2rem;
@@ -178,12 +179,29 @@
 
 .section {
   padding: 60px 0; }
-  .section__heading, .section__paragraph {
+  .section__heading, .section__paragraph, .section__img-wrap {
     --width: 12;
     --gap-constant: 0.3%;
     --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
     --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
     flex-basis: calc(var(--initialbasis) - var(--gap)); }
+  .section__images {
+    --width: 12;
+    --gap-constant: 0.3%;
+    --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+    --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
+    flex-basis: calc(var(--initialbasis) - var(--gap));
+    --columns: 12; }
+  .section__img-wrap {
+    --gap-constant: 0.3%;
+    --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+    --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
+    flex-basis: calc(var(--initialbasis) - var(--gap)); }
+    .section__img-wrap--small {
+      --width: 6;
+      margin-top: 20px; }
+  .section__img {
+    width: 100%; }
   .section__heading {
     font-family: 'Lobster', cursive;
     font-size: calc(calc(calc(calc(calc(1em * 1.333) * 1.333) * 1.333) * 1.333) * 1.333);
@@ -197,6 +215,10 @@
       display: block;
       letter-spacing: .5rem;
       margin-top: -25px; }
+    .section__heading--large {
+      font-size: 7.7rem; }
+      .section__heading--large::after {
+        display: none; }
   .section__paragraph {
     font-size: 1.8rem;
     color: #838383;
@@ -209,8 +231,10 @@
     --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
     flex-basis: calc(var(--initialbasis) - var(--gap)); }
   @media screen and (min-width: 992px) {
-    .section__heading, .section__paragraph {
-      --width: 8; } }
+    .section {
+      padding: 80px 0; }
+      .section__heading, .section__paragraph, .section__images {
+        --width: 8; } }
 
 .project-card__img-wrap, .project-card__card-wrap {
   --gap-constant: 0.3%;
@@ -407,6 +431,49 @@
       .form__wrap {
         box-shadow: 0 0 9px 4px #d7d7d7;
         padding: 50px; } }
+
+.page-footer {
+  background: #5050d6;
+  padding: 40px 0; }
+  .page-footer__heading, .page-footer__copy, .page-footer__socials {
+    --gap-constant: 0.3%;
+    --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+    --gap: calc(
+        (var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%)
+        );
+    flex-basis: calc(var(--initialbasis) - var(--gap)); }
+  .page-footer__heading {
+    --width: 12;
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin: 0; }
+  .page-footer__copy {
+    font-size: 1.6rem;
+    color: #ffffff;
+    --width: 5; }
+  .page-footer__socials {
+    --width: 3; }
+
+.engage-socials__heading {
+  font-size: 2.8rem;
+  text-align: center;
+  margin: 0;
+  --width: 12;
+  --gap-constant: 0.3%;
+  --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+  --gap: calc(
+        (var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%)
+        );
+  flex-basis: calc(var(--initialbasis) - var(--gap)); }
+
+.engage-socials__socials {
+  --width: 12;
+  --gap-constant: 0.3%;
+  --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+  --gap: calc(
+    (var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%)
+    );
+  flex-basis: calc(var(--initialbasis) - var(--gap)); }
 
 html {
   font-size: 62.5%; }

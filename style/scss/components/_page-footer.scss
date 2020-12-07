@@ -1,0 +1,33 @@
+.page-footer {
+    background: $header-color;
+    padding: 40px 0;
+
+    &__heading,
+    &__copy,
+    &__socials {
+        --gap-constant: 0.3%;
+        --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+        --gap: calc(
+        (var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%)
+        );
+        flex-basis: calc(var(--initialbasis) - var(--gap));
+    }
+
+    &__heading {
+        --width: 12;
+        font-size: 2.2rem;
+        color: #ffffff;
+        margin: 0;
+    }
+
+    &__copy {
+        font-size: 1.6rem;
+        color: #ffffff;
+        --width: 5;
+    }
+
+    &__socials {
+        --width: 3;
+    }
+    
+}

@@ -1,0 +1,27 @@
+.engage-socials {
+    
+
+    &__heading {
+        font-size: 2.8rem;
+        text-align: center;
+        margin: 0;
+
+        --width: 12;
+        --gap-constant: 0.3%;
+        --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+        --gap: calc(
+        (var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%)
+        );
+        flex-basis: calc(var(--initialbasis) - var(--gap));
+    }
+
+    &__socials {
+        --width: 12;
+    --gap-constant: 0.3%;
+    --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+    --gap: calc(
+    (var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%)
+    );
+    flex-basis: calc(var(--initialbasis) - var(--gap));
+    }
+}

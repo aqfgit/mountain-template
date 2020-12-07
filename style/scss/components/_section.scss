@@ -2,12 +2,39 @@
     padding: 60px 0;
 
     &__heading,
-    &__paragraph {
+    &__paragraph,
+    &__img-wrap {
         --width: 12;
         --gap-constant: 0.3%;
         --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
         --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
         flex-basis: calc(var(--initialbasis) - var(--gap));
+    }
+
+    &__images {
+        --width: 12;
+        --gap-constant: 0.3%;
+        --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+        --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
+        flex-basis: calc(var(--initialbasis) - var(--gap));
+
+        --columns: 12;
+    }
+
+    &__img-wrap {
+        --gap-constant: 0.3%;
+        --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
+        --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
+        flex-basis: calc(var(--initialbasis) - var(--gap));
+
+        &--small {
+            --width: 6;
+            margin-top: 20px;
+        }
+    }
+
+    &__img {
+        width: 100%;
     }
 
     &__heading {
@@ -24,6 +51,13 @@
             display: block;
             letter-spacing: .5rem;
             margin-top: -25px;
+        }
+
+        &--large {
+            font-size: $title;
+            &::after {
+                display: none;
+            }
         }
     }
 
@@ -49,8 +83,11 @@
     }
     
     @media screen and (min-width: 992px) {
+        padding: 80px 0;
+
         &__heading,
-        &__paragraph {
+        &__paragraph,
+        &__images {
             --width: 8;
         }
     }
