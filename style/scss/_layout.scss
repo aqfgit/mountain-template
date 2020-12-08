@@ -1,6 +1,7 @@
 .l-container {
     margin: 0 auto;
-    padding: 0 $mobile-container-padding;
+    padding-left:  $mobile-container-padding;
+    padding-right: $mobile-container-padding;
 
     @media (min-width: 768px) {
         width: 750px;
@@ -24,6 +25,10 @@
 
     &--between {
         justify-content: space-between;
+    }
+
+    &--align-center {
+        align-items: center;
     }
 
     @media (min-width: 992px) {

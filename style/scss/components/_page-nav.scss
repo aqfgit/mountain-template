@@ -8,10 +8,11 @@
 }
 
 .page-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  // flex-wrap: wrap;
+  padding: 20px 0 30px 0;
 
   $width: 12;
   $gap-constant: 0.3%;
@@ -88,7 +89,7 @@
     display: block;
     position: relative;
     animation: showNav 250ms ease-in-out both;
-    background: $header-color;
+    padding-bottom: 50px;
 
     &::before {
       display: block;
@@ -107,7 +108,7 @@
 @media screen and (min-width: $mobile-menu-breakpoint) {
   .page-nav {
     justify-content: space-between;
-    background: none;
+    //background: none;
     box-shadow: none;
 
     &__toggler {

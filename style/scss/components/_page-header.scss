@@ -1,6 +1,7 @@
 .page-header {
-  background: $header-color;
-  
+  background-image: url(../../../assets/images/wave-hero-background.svg);
+  background-size: cover;
+  background-position: top;  
   &__title {
     font-family: 'Fjalla One', sans-serif;
   }
@@ -21,7 +22,11 @@
   &__title-wrap {
     display: flex;
     flex-direction: column;
-    padding: 15% 0;
+    padding: 33% 0;
+
+    @media screen and (min-width: 720px) {
+      padding: 20% 0;
+    }
   }
 
   &__copy {
@@ -36,7 +41,26 @@
   }
 
   &__page-nav {
-    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &--extended {
+      background-image: url(../../../assets/images/wave-header.svg);
+      background-position: 0 90%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-bottom: 90px;
+    }
+
+    &--floating {
+      background-image: url(../../../assets/images/wave-header.svg);
+      background-position: 0 90%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 
   &__nav-wrap {
@@ -44,6 +68,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    padding: 20px;
     z-index: 999999;
     transition: background-color 300ms linear;
 

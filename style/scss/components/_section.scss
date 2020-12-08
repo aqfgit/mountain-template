@@ -79,9 +79,8 @@
         --initialbasis: calc(var(--width, 0) / var(--columns, 12) * 100%);
         --gap: calc((var(--columns, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
         flex-basis: calc(var(--initialbasis) - var(--gap));
-    
     }
-    
+
     @media screen and (min-width: 992px) {
         padding: 80px 0;
 
@@ -90,6 +89,10 @@
         &__images {
             --width: 8;
         }
+    }
+
+    &--no-header-padding {
+        padding-top: 180px;
     }
 
 }
